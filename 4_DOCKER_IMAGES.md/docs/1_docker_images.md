@@ -1,9 +1,28 @@
 # DOCKER IMAGES.
 
+## MỤC LỤC.
+
+[I. GIỚI THIỆU.]()
+
+[II. LÀM THẾ NÀO ĐỂ CÓ IMAGES.]()
+
+
+- [2.1.  CÁCH1 1: TẢI IMAGES TỪ DOCKER HUB.]( )
+
+- [2.2. CÁCH 2: DÙNG DOCKER FILE.]()
+- [2.3. CÁCH 3: ]()
+
+[III. CẤU TRÚC DOCKER IMGAES.]( )
+
+[IV. TỐI ƯU HÓA QUÁ TRÌNH BUILD.]()
+
+- [4.1. PHƯƠNG PHÁP 1: CACHING LAYER.]()
+- [4.2. PHƯƠNG PHÁP 2: DÙNG BASE IMGES.]()
+- [4.3. PHƯƠNG PHÁP 3: SỬ DỤNG BUILD NHIỀU GIAI ĐOẠN(MUILTY STATE BUILD).]( )
+
 ## I. GIỚI THIỆU.
 
 - là file app binary + các dependencies( các trương trình con, thư viện...)
-
 
 
 ![hinh ](../images/1_images.png)
@@ -15,6 +34,10 @@
 - tải trực tiếp images từ docker hub.
 
 - Dùng docker file.
+
+- Tạo từ docker container
+
+![hinh ](../images/15_images.png)
 
 ### 2.1. TẢI IMAGES TỪ DOCKER HUB.
 
@@ -42,6 +65,10 @@ VÍ DỤ.
 
 ![hinh ](../images/9_build_context.png)
 
+### 2.3. TẠO DOCKER IMAGES TỪ CONTAINER.
+
+
+`docker container commit +têncontainer +tênimages`: tạo images từ container
 
 
 
@@ -58,11 +85,45 @@ các layer xếp chồng lên nhau từ dưới lên trên. bên trên sẽ kế
 VÍ DỤ;
 
 ![hinh ](../images/8_layer.png)
-### 3.1. CACHING LAYER.
 
-là kỹ thuật dùng để tối ưu hóa docker file.
 
-### 3.2. BASE IMGES.
+KHI TẠO CONTAINER TỪ IMAGES, CONTAINER SẼ THÊM 1 LAYER NỮA LÊN TRÊN CỦA CÁC LAYER CŨ CỦA IMAGES. ĐIỀU KHÁC BIỆT LÀ LAYER NÓ CÓ QUYỀN GHI.
+
+
+![hinh ](../images/14_imgaes.png)
+
+## IV. TỐI ƯU HÓA QUÁ TRÌNH BUILD.
+
+### 4.1. CACHING LAYER.
+
+là kỹ thuật dùng để tối ưu hóa docker file dựa vào thuộc tính kế thừa layer
+
+### 4.2. BASE IMGES.
+
+
+### 4.2. SỬ DỤNG BUILD NHIỀU GIAI ĐOẠN(MUILTI STAGE BUILD).
+
+TA ĐẶT TÊN CÁC GIAI ĐOẠN Ở CHỖ FROM NHA.
+
+`FROM +imagescơsở + as +tên stage`: lệnh đặt tên giai đoạn.
+
+
+Khi build dockerfile. chúng ta sẽ gặp phải vấn đề ví dụ như sau:
+
+- ta cần file /bin/ hello để buil dockerfile. nhưng cài đặt file đó rất nhiều thư viện
+
+- vậy ta sẽ tạo riêng 1 stage để build ra file /bin/hello thôi.
+
+- ta sẽ tạo 1 stage khác lấy kết quả của stage 1 để build. nó sẽ nhẹ hơn khi ta build docker file đó.
+
+![hinh ](../images/13_muilti_stage.png)
+
+
+
+
+
+
+
 
 
 

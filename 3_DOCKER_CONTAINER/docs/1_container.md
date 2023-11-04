@@ -21,14 +21,29 @@ LÀ MỘT MÔI TRƯỜNG DỘC LẬP CHO APPLICATION.
 
 `[watch] docker container logs +tênconatiner`: kiểm tra log của chương trình(ví dụ như reload nó cũng báo về nha)
 
-`docker container exec -it +têncontainer+ bash`: truy cập vào bên trong container.
--  tham số -it: với i là để tạo ra sesion và t để tạo ra teminal. 
+
 
 `docker container stats +têncontainer`: kiểm tra thông số container.
 
 
 `docker container inspect +têncontainer`: hiển thị chi tiết về container bao gồm địa chỉ ip của conatiner đó.
-### 1.4. LỆNH LÀM VIỆC CONTAINER TỪ IMAGES.
+
+### 1.4. LỆNH CHẠY CONTAINER TỪ IMAGES.
+
+
+
+`docker run --name +têncontainer -p +port+ -d +tênimgaes`: chạy container từ images.
+
+- tham số -d là chạy ngầm nha.
+
+`docker container exec -it +têncontainer+ bash`: truy cập vào bên trong container.
+-  tham số -it: với i là để tạo ra sesion và t để tạo ra teminal. 
+
+KẾT HỢP 2 LỆNH TRÊN.
+
+`docker container run -name +têncontainer -it +tênimages +bash `: vừa chay vừa truy cập vào trong câu lệnh luôn
+
+
 
 
 ### 1.5. LỆNH XÓA CONTAINER.

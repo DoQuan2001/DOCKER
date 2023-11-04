@@ -1,0 +1,5 @@
+# PERSISTENT DATA.
+
+## I. PERSISTENT DATA LÀ GÌ?
+
+
