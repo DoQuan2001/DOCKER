@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+
+  mysql:
+    build:
+      context:
+      dockerfile:
+    restart: always
+    ports:
+    volume: 
+   

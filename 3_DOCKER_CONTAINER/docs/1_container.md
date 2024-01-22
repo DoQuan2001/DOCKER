@@ -17,7 +17,8 @@ LÀ MỘT MÔI TRƯỜNG DỘC LẬP CHO APPLICATION.
 
 ![hinh ](../images/2_commnand.png)
 
-### 1.3. LỆNH KIỂM TRA.
+
+- `watch docker ps -a`:check ra container đang chạy, cái watch là xem log luôn nha.
 
 `[watch] docker container logs +tênconatiner`: kiểm tra log của chương trình(ví dụ như reload nó cũng báo về nha)
 
