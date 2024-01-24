@@ -52,9 +52,21 @@ Cách làm: mount ngược lại thư mục từ container về máy host.
 
 ### 3.2. CÁCH TẠO VOLUME.
 
-`docker container run -v +TÊNCỦAVOLUME: thưmụctrêncontaienercần mounte + images`: tạo volume
+LƯU Ý: VOLUME LÀ NƠI LƯU TRỮ DỮ LIỆU, TA KHÔNG THỂ XEM NÓ TỪ MÁY CỦA TA. TA CHỈ CÓ THỂ GẮN NÓ VÀO 1 CONTAINER RỒI TRUY CẬP VÔ TRONG CONTAINER ĐÓ MỚI DÙNG ĐƯỢC. MỤC ĐÍCH CHỈ ĐỂ BK.
+
+
+`docker volume create tênvolume `: tạo 1 volume
+
+`docker container run -v +TÊNCỦAVOLUME: thưmụctrêncontaienercần mounte + images`: tạo volume rồi gắn vô container mới.
+
+`docker container update --mount source=my_volume,target=/path/in/container my_container`: gắn volume vào 1 container đang chạy.
 
 ![hinh ](../images/6_volume.png)
+
+
+### 3.3. CÁCH ĐƯA DỮ LIỆU TỪ CONTAINER VỀ MÁY HOST ĐỂ SỬ DỤNG ĐƯỢC NHA.
+
+`docker cp container_id:/path/in/container /path/on/host`
 
 
 

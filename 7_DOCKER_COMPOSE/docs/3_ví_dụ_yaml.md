@@ -11,9 +11,17 @@ service: # NOI DINH NGHIA CAC CONTAINER.
             context:
             dockerfile:
         restart: always
-        
+
         ports: # chỉ ra port của máy host và port của contaier
         environment: # định nghia các biến ví dụ tài khoản, mật khẩu
-        volumes: 
+        
+        volumes:
+            - type: volume
+            source: nginx-data
+            target: /usr/share/nginx/html
+
+volumes:
+    nginx-data:
+
 
 ```

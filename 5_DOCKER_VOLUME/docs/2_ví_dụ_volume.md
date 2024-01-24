@@ -9,3 +9,6 @@
 
 
 `mkdir \app && touch \app\index.html `: tạo thư mục /app để thử.
+
+
+### BƯỚC 2: 

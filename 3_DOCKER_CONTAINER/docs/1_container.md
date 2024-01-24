@@ -62,6 +62,14 @@ KẾT HỢP 2 LỆNH TRÊN.
 `docker rm <container ID1> [<container ID2>]`: xóa chính xác container
 
 
+### 1.6. LỆNH LIST.
+
+thường lệnh list sẽ là:
+
+`docker +thành phần+ ls -q`: list ra all nha
+
+
+
 
 ## II. CÁCH HOẠT ĐỘNG.
 

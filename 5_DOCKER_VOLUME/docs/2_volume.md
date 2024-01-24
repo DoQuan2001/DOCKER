@@ -16,7 +16,10 @@ trong đó:
 
 - thư mục chứa data trên container: là thư mục workdir khi khai báo trên dockerfile đó.
 
-- LƯU Ý. TÊN VOLUME CÓ THỂ ĐƯỢC KHAI BÁO TRÊN DOCKER FILE LUÔN NHA.
+LƯU Ý. TÊN VOLUME CÓ THỂ ĐƯỢC KHAI BÁO TRÊN DOCKER FILE LUÔN NHA. KHI KHAI BÁO TRÊN DOCKERFILE THÌ KHÔNG CẦN SỬ DỤNG CÂU LỆNH, TỰ ĐỘNG DOCKER SẼ RENDER RA DOCKERFILE.
+
+
+
 
 
 
