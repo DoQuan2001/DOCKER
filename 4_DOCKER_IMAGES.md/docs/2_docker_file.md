@@ -55,12 +55,12 @@ RUN apt-get -y update && apt-get -y install nginx
 
 ### 2.2. CMD
 
-CMD NÀY LÀ LỆNH KHỞI ĐÔNHJ CHƯƠNG TRÌNH NHA. 
+CMD NÀY LÀ LỆNH KHỞI ĐÔNHJ CHƯƠNG TRÌNH NHA.  
 
 
 `CMD ["executable","param1","param2"]`: CÚ PHÁP CMD
 
-
+LƯU Ý, TA CŨNG CÓ THỂ COPY NGUYÊN CÂU LỆNH START CHƯƠNG TRÌNH CỦA CENTOS, UBUNTU NẾU HỆ ĐIỀU HÀNH TA ĐẶT Ở FROM LÀ UBUNTU, CETNOTS
 trong đó:
 
 - executable: Là tên của chương trình hoặc lệnh mà bạn muốn container thực thi.
