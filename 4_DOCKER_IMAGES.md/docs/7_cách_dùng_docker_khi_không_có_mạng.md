@@ -1,0 +1,3 @@
+# CÁCH DÙNG DOCKER FILE KHI KHÔNG CÓ MẠNG.
+
+
